@@ -12,9 +12,11 @@ const swap = () => {
     if (spanOne.innerText === '°C') {
         spanOne.innerText = '°F';
         spanTwo.innerText = '°C';
+        result.innerText = '';
     } else {
         spanOne.innerText = '°C';
         spanTwo.innerText = '°F';
+        result.innerText = '';
     }
 };
 
@@ -31,8 +33,16 @@ const fahrToCel = () => {
 };
 
 const conversion = () => {
-
-}
+    if (converter.value !== '') {
+        if (spanOne.innerText === '°C') {
+            celToFahr();
+        } else {
+            fahrToCel();
+        }
+    } else {
+        result.innerText = 'You must enter some number!';
+    }
+};
 
 changeBtn.addEventListener('click', swap);
 convBtn.addEventListener('click', conversion)
