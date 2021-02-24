@@ -18,4 +18,21 @@ const swap = () => {
     }
 };
 
+const celToFahr = () => {
+    fahrenheit = converter.value * 1.8 + 32;
+    result.innerText = `${converter.value}°C is ${fahrenheit.toFixed(1)}°F`;
+    converter.value = '';
+};
+
+const fahrToCel = () => {
+    celcius = (converter.value * - 32) / 1.8;
+    result.innerText = `${converter.value}°F is ${celcius.toFixed(1)}°C`;
+    converter.value = '';    
+};
+
+const conversion = () => {
+
+}
+
 changeBtn.addEventListener('click', swap);
+convBtn.addEventListener('click', conversion)
