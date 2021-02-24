@@ -44,5 +44,11 @@ const conversion = () => {
     }
 };
 
+const reset = () => {
+    converter.value = '';
+    result.innerText = '';
+}
+
 changeBtn.addEventListener('click', swap);
-convBtn.addEventListener('click', conversion)
+convBtn.addEventListener('click', conversion);
+resetBtn.addEventListener('click', reset);
